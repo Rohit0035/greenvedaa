@@ -87,7 +87,7 @@ const CartProduct = ({
           <Link href={`/products/${id}`}>{sliceText(title, 30)}</Link>
         </h4>
       </td>
-      <td className="cart-product-price">${netPriceModified}</td>
+      <td className="cart-product-price">₹{netPriceModified}</td>
       {isWishlist ? (
         <td className="cart-product-stock">In Stock</td>
       ) : (

@@ -57,7 +57,7 @@ const HeaderCart = () => {
                         </Link>
                       </h6>
                       <span className="mini-cart-quantity">
-                        {quantity} x ${modifyAmount(netPrice)}
+                        {quantity} x ₹{modifyAmount(netPrice)}
                       </span>
                     </div>
                   </div>
@@ -69,7 +69,7 @@ const HeaderCart = () => {
         <div className="mini-cart-footer">
           <div className="mini-cart-sub-total">
             <h5>
-              Subtotal: <span>${totalPrice.toFixed(2)}</span>
+              Subtotal: <span>₹{totalPrice.toFixed(2)}</span>
             </h5>
           </div>
           <div className="btn-wrapper">

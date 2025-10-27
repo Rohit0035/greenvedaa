@@ -23,37 +23,43 @@ const TopRatedProductCard = ({ product, isShowDisc }) => {
           <ul>
             <li>
               <Link href="#">
-                <i className="fas fa-star"></i>
+                <i className="fas fa-star" />
               </Link>
             </li>{" "}
             <li>
               <Link href="#">
-                <i className="fas fa-star"></i>
+                <i className="fas fa-star" />
               </Link>
             </li>{" "}
             <li>
               <Link href="#">
-                <i className="fas fa-star"></i>
+                <i className="fas fa-star" />
               </Link>
             </li>{" "}
             <li>
               <Link href="#">
-                <i className="fas fa-star"></i>
+                <i className="fas fa-star" />
               </Link>
             </li>{" "}
             <li>
               <Link href="#">
-                <i className="fas fa-star"></i>
+                <i className="fas fa-star" />
               </Link>
             </li>
           </ul>
         </div>
         <h6>
-          <Link href={`/products/${id}`}>{sliceText(title, 25)}</Link>
+          <Link href={`/products/${id}`}>
+            {sliceText(title, 25)}
+          </Link>
         </h6>
         <div className="product-price">
-          <span>${netPriceModified}</span>
-          <del>${priceModified}</del>
+          <span>
+            ₹{netPriceModified}
+          </span>
+          <del>
+            ₹{priceModified}
+          </del>
         </div>
       </div>
     </div>

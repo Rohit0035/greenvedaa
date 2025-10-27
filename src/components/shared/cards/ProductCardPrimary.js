@@ -26,29 +26,25 @@ const ProductCardPrimary = ({ product, isShowDisc }) => {
     >
       <div className="product-img">
         <Link href={`/products/${id}`}>
-          <Image
-            src={image}
-            alt="#"
-            width={1000}
-            height={1000}
-            // placeholder="blur"
-          />
+          <Image src={image} alt="#" width={1000} height={1000} />
         </Link>
-        {status || isShowDisc ? (
-          <div className="product-badge">
-            <ul>
-              {isShowDisc ? (
-                <li className="sale-badge">-{disc}%</li>
-              ) : status === "sale" ? (
-                <li className="new-badge">{status}</li>
-              ) : (
-                <li className="sale-badge">{status}</li>
-              )}
-            </ul>
-          </div>
-        ) : (
-          ""
-        )}
+        {status || isShowDisc
+          ? <div className="product-badge">
+              <ul>
+                {isShowDisc
+                  ? <li className="sale-badge">
+                      -{disc}%
+                    </li>
+                  : status === "sale"
+                    ? <li className="new-badge">
+                        {status}
+                      </li>
+                    : <li className="sale-badge">
+                        {status}
+                      </li>}
+              </ul>
+            </div>
+          : ""}
         <div className="product-hover-action">
           <ul>
             <li>
@@ -58,30 +54,26 @@ const ProductCardPrimary = ({ product, isShowDisc }) => {
                 data-bs-toggle="modal"
                 data-bs-target="#quick_view_modal"
               >
-                <i className="far fa-eye"></i>
+                <i className="far fa-eye" />
               </Link>
             </li>{" "}
             <li>
               <Link
-                onClick={(e) => {
+                onClick={e => {
                   e.preventDefault();
-                  addProductToCart({
-                    ...product,
-                    quantity: 1,
-                    color: color,
-                  });
+                  addProductToCart({ ...product, quantity: 1, color: color });
                 }}
                 href="#"
                 title="Add to Cart"
                 data-bs-toggle="modal"
                 data-bs-target="#add_to_cart_modal"
               >
-                <i className="fas fa-shopping-cart"></i>
+                <i className="fas fa-shopping-cart" />
               </Link>
             </li>{" "}
             <li>
               <Link
-                onClick={(e) => {
+                onClick={e => {
                   e.preventDefault();
                   addProductToWishlist({ ...product, quantity: 1 });
                 }}
@@ -90,7 +82,7 @@ const ProductCardPrimary = ({ product, isShowDisc }) => {
                 data-bs-toggle="modal"
                 data-bs-target="#liton_wishlist_modal"
               >
-                <i className="far fa-heart"></i>
+                <i className="far fa-heart" />
               </Link>
             </li>
           </ul>
@@ -101,36 +93,38 @@ const ProductCardPrimary = ({ product, isShowDisc }) => {
           <ul>
             <li>
               <Link href="#">
-                <i className="fas fa-star"></i>
+                <i className="fas fa-star" />
               </Link>
             </li>{" "}
             <li>
               <Link href="#">
-                <i className="fas fa-star"></i>
+                <i className="fas fa-star" />
               </Link>
             </li>{" "}
             <li>
               <Link href="#">
-                <i className="fas fa-star"></i>
+                <i className="fas fa-star" />
               </Link>
             </li>{" "}
             <li>
               <Link href="#">
-                <i className="fas fa-star-half-alt"></i>
+                <i className="fas fa-star-half-alt" />
               </Link>
             </li>{" "}
             <li>
               <Link href="#">
-                <i className="far fa-star"></i>
+                <i className="far fa-star" />
               </Link>
             </li>
           </ul>
         </div>
         <h2 className="product-title">
-          <Link href={`/products/${id}`}>{title}</Link>
+          <Link href={`/products/${id}`}>
+            {title}
+          </Link>
         </h2>
         <div className="product-price">
-          <span>${netPriceModified}</span> <del>${priceModified}</del>
+          <span>₹{netPriceModified}</span> <del>₹{priceModified}</del>
         </div>
       </div>
     </div>

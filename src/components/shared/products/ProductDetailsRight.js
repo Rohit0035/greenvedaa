@@ -99,7 +99,7 @@ const ProductDetailsRight = ({ product }) => {
       <h3>{title}</h3>
       {/* price */}
       <div className="product-price text-nowrap">
-        <span>${netPriceModified}</span> <del>${priceModified}</del>
+        <span>₹{netPriceModified}</span> <del>₹{priceModified}</del>
       </div>
       {/* description */}
 

@@ -12,7 +12,9 @@ const CheckoutProduct = ({ product }) => {
       <td>
         {sliceText(title, 20)} <strong>× {quantity}</strong>
       </td>
-      <td>${modifyAmount(totalPriceSingle)}</td>
+      <td>
+        ₹{modifyAmount(totalPriceSingle)}
+      </td>
     </tr>
   );
 };

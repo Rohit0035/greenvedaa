@@ -106,22 +106,22 @@ const CartPrimary = () => {
                     <tbody>
                       <tr>
                         <td>Cart Subtotal</td>
-                        <td>${modifyAmount(subTotalPrice)}</td>
+                        <td>₹{modifyAmount(subTotalPrice)}</td>
                       </tr>
                       <tr>
                         <td>Shipping and Handing</td>
-                        <td>${modifyAmount(vat)}</td>
+                        <td>₹{modifyAmount(vat)}</td>
                       </tr>
                       <tr>
                         <td>Vat</td>
-                        <td>$00.00</td>
+                        <td>₹00.00</td>
                       </tr>
                       <tr>
                         <td>
                           <strong>Order Total</strong>
                         </td>
                         <td>
-                          <strong>${totalPrice}</strong>
+                          <strong>₹{totalPrice}</strong>
                         </td>
                       </tr>
                     </tbody>

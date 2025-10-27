@@ -13,17 +13,16 @@ const Logo = ({ sticky }) => {
     isNotHeaderTop,
     navBg,
     isHeaderSupport,
-    isTextWhite,
+    isTextWhite
   } = useHeaderContex();
 
   return (
     <div className={sticky ? "sticky-logo" : "col-6"}>
       <div
-        className={`${
-          !isHeaderSupport && (headerStyle === 3 || headerStyle === 5)
-            ? ""
-            : "site-logo-wrap"
-        }`}
+        className={`${!isHeaderSupport &&
+        (headerStyle === 3 || headerStyle === 5)
+          ? ""
+          : "site-logo-wrap"}`}
         style={{ height: "100%" }}
       >
         <div className="site-logo">
@@ -32,9 +31,7 @@ const Logo = ({ sticky }) => {
               src={
                 navBg === "secondary" && sticky
                   ? logoImage1
-                  : headerStyle === 2 || isTextWhite
-                  ? logoImage1
-                  : logoImage1
+                  : headerStyle === 2 || isTextWhite ? logoImage1 : logoImage1
               }
               alt="Logo"
               width={80}

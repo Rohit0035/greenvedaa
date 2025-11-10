@@ -4,7 +4,7 @@ import HeroPrimary from "@/components/sections/hero-banners/HeroPrimary";
 
 const CheckoutMain = () => {
   return (
-    <main>
+    <main className="d-none">
       <HeroPrimary title="Checkout" text="Checkout" />
       <CheckoutPrimary />
       <Features4 />

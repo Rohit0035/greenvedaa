@@ -5,7 +5,7 @@ import React from "react";
 
 const WishlistMain = () => {
   return (
-    <main>
+    <main className="d-none">
       <HeroPrimary title="Wishlist" text="Wishlist" />
       <WishlistPrimary />
       <Features4 />

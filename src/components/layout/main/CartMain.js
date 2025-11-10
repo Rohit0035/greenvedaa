@@ -5,7 +5,7 @@ import React from "react";
 
 const CartMain = () => {
   return (
-    <main>
+    <main className="d-none">
       <HeroPrimary title="Cart" text="Cart" />
       <CartPrimary />
       <Features4 />

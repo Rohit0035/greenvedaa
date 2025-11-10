@@ -56,8 +56,16 @@ const ProductsPrimary = ({ isSidebar, currentTapId }) => {
     <div className="ltn__product-area ltn__product-gutter mb-120">
       <div className="container">
         <div className="row">
-          <div
-            className={`${isSidebar === false ? "col-lg-12" : "col-lg-8"}  ${
+         
+          {isSidebar === false ? (
+            ""
+          ) : (
+            <div className="col-lg-3">
+              <ProductSidebar />
+            </div>
+          )}
+           <div
+            className={`${isSidebar === false ? "col-lg-12" : "col-lg-9"}  ${
               isSidebar === "left" ? "order-lg-2 " : ""
             }`}
           >
@@ -67,23 +75,6 @@ const ProductsPrimary = ({ isSidebar, currentTapId }) => {
               className={`ltn__shop-options ${!totalPages ? "no-data" : ""}`}
             >
               <ul>
-                <li>
-                  <div className="ltn__grid-list-tab-menu ">
-                    <div className="nav">
-                      {tabControllers?.map((iconName, idx) => (
-                        <Link
-                          key={idx}
-                          onClick={() => setCurrentTab(idx)}
-                          className={idx === currentTab ? "active " : ""}
-                          data-bs-toggle="tab"
-                          href={`#liton_product_${idx + 1}`}
-                        >
-                          <i className={iconName}></i>
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                </li>
                 <li>
                   {isSidebar === "left" || isSidebar === false ? (
                     <ShopShortSelect setArrangeInput={setArrangeInput} />
@@ -135,21 +126,6 @@ const ProductsPrimary = ({ isSidebar, currentTapId }) => {
                   </div>
                 </div>
               </div>
-              <div
-                className={`tab-pane fade ${currentTab === 1 ? " active" : ""}`}
-                id="liton_product_2"
-              >
-                <div className="ltn__product-tab-content-inner ltn__product-list-view">
-                  <div className="row">
-                    {/* <!-- ltn__product-item --> */}
-                    {currentItems?.map((product, idx) => (
-                      <div className="col-lg-12" key={idx}>
-                        <ProductCardPrimary2 product={product} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
             </div>
             {totalPages > 1 ? (
               <Pagination
@@ -164,13 +140,6 @@ const ProductsPrimary = ({ isSidebar, currentTapId }) => {
               ""
             )}
           </div>
-          {isSidebar === false ? (
-            ""
-          ) : (
-            <div className="col-lg-4">
-              <ProductSidebar />
-            </div>
-          )}
         </div>
       </div>
     </div>

@@ -15,9 +15,8 @@ const HeaderRight = () => {
   const totalPrice = countTotalPrice(cartProducts);
   return (
     <div
-      className={`ltn__header-options  ${
-        headerStyle === 3 ? "col" : "ltn__header-options-2"
-      }`}
+      className={`ltn__header-options  ${headerStyle === 3 ? "col" : "ltn__header-options-2"
+        }`}
     >
       {headerStyle === 3 ? <HeaderCurrency /> : ""}
       {/* <!-- header-search-1 --> */}{" "}
@@ -48,6 +47,18 @@ const HeaderRight = () => {
             </Link>
             <ul>
               <li>
+                <Link href="/">Sign in</Link>
+              </li>
+              <li>
+                <Link href="/">Register</Link>
+              </li>
+              <li>
+                <Link href="/">My Account</Link>
+              </li>
+              <li>
+                <Link href="/">Wishlist</Link>
+              </li>
+              {/* <li>
                 <Link href="/login">Sign in</Link>
               </li>
               <li>
@@ -58,7 +69,7 @@ const HeaderRight = () => {
               </li>
               <li>
                 <Link href="/wishlist">Wishlist</Link>
-              </li>
+              </li> */}
             </ul>
           </li>
         </ul>

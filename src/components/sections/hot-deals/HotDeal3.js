@@ -18,7 +18,7 @@ const HotDeal3 = () => {
           <div className="col-lg-7" data-aos="zoom-in">
             <div className="call-to-action-inner call-to-action-inner-4 text-color-white--- text-center---">
               <div className="section-title-area ltn__section-title-2 text-center---">
-                <h6 className="text-success fs-5">Today’s Hot Deal</h6>
+                <h6 className="text-success fs-5 fw-bold">Today’s Hot Deal</h6>
                 <h1 className="section-title">
                   GreenVedaa Makhanya <br /> Flavored & Raw Collection
                 </h1>

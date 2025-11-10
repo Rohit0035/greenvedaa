@@ -24,7 +24,7 @@ const AboutHome = ({ pt }) => {
           <div className="col-lg-6">
             <div className="about-us-info-wrap" data-aos="zoom-in">
               <div className="section-title-area ltn__section-title-2 mb-1">
-                <h6 className="section-subtitle  text-success fw-semibold mb-2 fs-5">
+                <h6 className="section-subtitle  text-success fw-semibold mb-2 fs-5 fw-bold">
                   About GreenVedaa
                 </h6>
                 <h2 className="fw-bold fs-1 mb-1">

@@ -6,31 +6,31 @@ import ProductCategories from "./widgets/ProductCategories";
 import PriceRange from "./widgets/PriceRange";
 import SidebarTopRatedProducs from "./widgets/SidebarTopRatedProducs";
 import ProductSizes from "./widgets/ProductSizes";
-import ProductColors from "./widgets/ProductColors";
 
 const ProductSidebar = () => {
   return (
     <aside className="sidebar ltn__shop-sidebar ltn__right-sidebar">
+
+       {/* <!-- Search Widget --> */}
+      <SidebarSearch />
+
       {/* <!-- Category or Brands Widget --> */}
       {<ProductCategories />}
 
       {/* <!-- Price Filter Widget --> */}
       <PriceRange />
 
-      {/* <!-- Top Rated Product Widget --> */}
-      <SidebarTopRatedProducs />
-
-      {/* <!-- Search Widget --> */}
-      <SidebarSearch />
-
-      {/* <!-- Tagcloud Widget --> */}
-      <ProductTags />
 
       {/* <!-- Size Widget --> */}
       <ProductSizes />
 
+      {/* <!-- Top Rated Product Widget --> */}
+      <SidebarTopRatedProducs />
+
+      {/* <!-- Tagcloud Widget --> */}
+      <ProductTags />
+
       {/* <!-- Color Widget --> */}
-      <ProductColors />
 
       {/* <!-- Banner Widget --> */}
       <SidebarBanner image={"/img/banner/banner-2.jpg"} />

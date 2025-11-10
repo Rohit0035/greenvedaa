@@ -19,8 +19,7 @@ const FooterAbout2 = () => {
           </div>
         </div>
         <p>
-          Lorem Ipsum is simply dummy text of the and typesetting industry.
-          Lorem Ipsum is dummy text of the printing.
+          GreenVedaa is a holistic lifestyle brand that aims to redefine purity and sustainability.
         </p>
        
       </div>

@@ -10,22 +10,22 @@ const HeroGridVideo = () => {
     {
       id: 1,
       src: "/img/common/videos/g-1.mp4",
-      link: "/videos/martial-arts-training",
+      link: "/shop",
     },
     {
       id: 2,
       src: "/img/common/videos/g-2.mp4",
-      link: "/videos/self-defense-class",
+      link: "/shop",
     },
     {
       id: 3,
       src: "/img/common/videos/g-3.mp4",
-      link: "/videos/kids-taekwondo",
+      link: "/shop",
     },
     {
       id: 4,
       src: "/img/common/videos/g-4.mp4",
-      link: "/videos/fitness-discipline",
+      link: "/shop",
     },
   ];
 

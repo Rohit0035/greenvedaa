@@ -4,7 +4,7 @@ const HeroPrimary = ({ text, title, item, type, mb, isCapitalize, bg }) => {
   const { name, path } = item ? item : {};
   return (
     <div
-      className={`ltn__breadcrumb-area ${
+      className={`ltn__breadcrumb-area mb-5 ${
         type === 3
           ? "ltn__breadcrumb-area-2 plr--9"
           : type === 2

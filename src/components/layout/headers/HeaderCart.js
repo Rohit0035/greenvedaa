@@ -76,7 +76,7 @@ const HeaderCart = () => {
             <ButtonPrimary text={"View Cart"} path={"/cart"} />
             <ButtonSecondary text={"Checkout"} path={"/checkout"} />
           </div>
-          <p>Free Shipping on All Orders Over $100!</p>
+          <p>Free Shipping on All Orders Over ₹100!</p>
         </div>
       </div>
     </div>

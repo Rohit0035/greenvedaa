@@ -27,7 +27,7 @@ const Header = () => {
       <header
         className={`ltn__header-area    ${
           headerStyle === 2
-            ? "ltn__header-4 ltn__header-6 bg-white"
+            ? "ltn__header-4 ltn__header-6 ltn__header-transparent gradient-color-2"
             : headerStyle === 3
             ? isNotHeaderRight
               ? "ltn__header-4 "
@@ -38,7 +38,7 @@ const Header = () => {
             ? "ltn__header-3 section-bg-6"
             : isNotTransparent
             ? "ltn__header-5"
-            : "ltn__header-5  "
+            : " ltn__header-transparent ltn__header-5  "
         } ${isTextWhite ? "bg-white" : ""}`}
       >
         {/* <!-- ltn__header-top-area start --> */}

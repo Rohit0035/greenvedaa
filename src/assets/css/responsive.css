@@ -97,3 +97,14 @@
 .ltn__main-menu > ul {
     justify-content: flex-end;
 }
+
+
+/* all mobile */
+@media only screen and (max-width: 600px) {
+ .common-breadcrumb.bg-light {
+    padding-top: 120px !important;
+ } 
+aside.sidebar.ltn__shop-sidebar.ltn__right-sidebar {
+    margin-top: 0px;
+}
+}

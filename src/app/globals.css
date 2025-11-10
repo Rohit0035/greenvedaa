@@ -15613,7 +15613,7 @@ input.cart-plus-minus-box {
 }
 .theme-btn-2:hover {
   background-color: var(--ltn__secondary-color) !important;
-  color: var(--white) !important;
+  color: var(--black) !important;
 }
 
 .theme-btn-3 {

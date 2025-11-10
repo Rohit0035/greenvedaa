@@ -86,11 +86,17 @@ const Navbar = () => {
         className={`header-menu ${headerStyle === 5 ? "header-menu-2" : "d-none d-xl-block"
           } `}
       >
-        <nav>
+        <nav className="d-flex justify-content-between ">
+          <div className="serch mt-3">
+            <div className="input-group">
+              <input type="search" placeholder="serach.." className="px-2 py-2" style={{ border: '1px solid#cccccc42', width: '280px' }} />
+              <button className="btn btn-light">
+                <i className="fas fa-search text-dark opecity-10"/>
+              </button>
+            </div>
+
+          </div>
           <div className="ltn__main-menu">
-             <div className="serch position-absolute" style={{top:'15px'}}>
-                 <input type="search"  placeholder="serach.." className="px-2 py-2"  style={{border:'1px solid#cccccc42'}}/>
-             </div>
             <ul>
               {navItems?.map((item, idx) => (
                 <NavItem key={idx} item={item} />

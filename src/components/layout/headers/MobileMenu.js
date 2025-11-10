@@ -76,14 +76,6 @@ const MobileMenu = () => {
           </div>
           <button className="ltn__utilize-close">×</button>
         </div>
-        <div className="ltn__utilize-menu-search-form">
-          <form action="#">
-            <input type="text" placeholder="Search..." />
-            <button>
-              <i className="fas fa-search"></i>
-            </button>
-          </form>
-        </div>
         <div className="ltn__utilize-menu">
           <ul>
             {navItems?.map(({ name, path, accordionItems }, idx) => (
@@ -111,60 +103,6 @@ const MobileMenu = () => {
                 )}
               </li>
             ))}
-          </ul>
-        </div>
-        <div className="ltn__utilize-buttons ltn__utilize-buttons-2">
-          <ul>
-            <li>
-              <Link href="/account" title="My Account">
-                <span className="utilize-btn-icon">
-                  <i className="far fa-user"></i>
-                </span>
-                My Account
-              </Link>
-            </li>
-            <li>
-              <Link href="/wishlist" title="Wishlist">
-                <span className="utilize-btn-icon">
-                  <i className="far fa-heart"></i>{" "}
-                  <sup>{totalWishlistProduct}</sup>
-                </span>
-                Wishlist
-              </Link>
-            </li>
-            <li>
-              <Link href="/cart" title="Shoping Cart">
-                <span className="utilize-btn-icon">
-                  <i className="fas fa-shopping-cart"></i>{" "}
-                  <sup>{totalCartProduct}</sup>
-                </span>
-                Shoping Cart
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="ltn__social-media-2">
-          <ul>
-            <li>
-              <Link href="https://www.facebook.com" title="Facebook">
-                <i className="fab fa-facebook-f"></i>
-              </Link>
-            </li>
-            <li>
-              <Link href="https://x.com" title="Twitter">
-                <i className="fab fa-twitter"></i>
-              </Link>
-            </li>
-            <li>
-              <Link href="https://www.linkedin.com" title="Linkedin">
-                <i className="fab fa-linkedin"></i>
-              </Link>
-            </li>
-            <li>
-              <Link href="https://www.instagram.com" title="Instagram">
-                <i className="fab fa-instagram"></i>
-              </Link>
-            </li>
           </ul>
         </div>
       </div>

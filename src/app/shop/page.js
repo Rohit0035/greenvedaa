@@ -1,4 +1,5 @@
 import ShopMain from "@/components/layout/main/ShopMain";
+import CommonBreadcrumb from "@/components/sections/custom/CommonBreadcrumb";
 import PageWrapper from "@/components/shared/wrappers/PageWrapper";
 
 const Shop = () => {
@@ -9,6 +10,7 @@ const Shop = () => {
       isTextWhite={true}
       isNavbarAppointmentBtn={true}
     >
+       <CommonBreadcrumb title="Products" label="Shop"/>
       <ShopMain isSidebar="primary" />
     </PageWrapper>
   );

@@ -113,10 +113,10 @@ const ProductDetailsRight = ({ product }) => {
           >
             <strong>Categories:</strong>{" "}
             <span>
-              <Link href="/shop?category=fruits">Fruits</Link>{" "}
-              <Link href="/shop?category=meat">Meat</Link>{" "}
-              <Link href="/shop?category=fish">Fish</Link>{" "}
-              <Link href="/shop?category=fried">Fried</Link>
+              <Link href="/shop?category=fruits">Snacks</Link>{" "}
+              <Link href="/shop?category=meat">Wellness</Link>{" "}
+              <Link href="/shop?category=fish">Powders</Link>{" "}
+              <Link href="/shop?category=fried">Ritual Kits</Link>
             </span>
           </li>
         </ul>

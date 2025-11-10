@@ -6,22 +6,22 @@ import React from "react";
 
 const BlogTags = () => {
   const { currentPath, tag: currentTag } = useCommonContext();
+
+  // ✅ Updated tags list
   const tags = [
-    "popular",
-    "desgin",
-    "ux",
-    "usability",
-    "develop",
-    "icon",
-    "car",
-    "service",
-    "repairs",
-    "auto parts",
-    "oil",
-    "dealer",
-    "oil change",
-    "body color",
+    "Makhana (raw)",
+    "Honey",
+    "Rice",
+    "Pulses",
+    "Maize",
+    "Vermicompost",
+    "Spices",
+    "Mustard",
+    "Coriander",
+    "Flaxseed",
+    "Haldi / Turmeric",
   ];
+
   return (
     <div className="widget ltn__tagcloud-widget">
       <h4 className="ltn__widget-title ltn__widget-title-border">
@@ -31,9 +31,7 @@ const BlogTags = () => {
         {tags?.map((tag, idx) => (
           <li key={idx}>
             <Link
-              href={`${currentPath ? currentPath : "/blogs"}?tag=${makePath(
-                tag
-              )}`}
+              href={`${currentPath ? currentPath : "/blogs"}?tag=${makePath(tag)}`}
               className={currentTag === makePath(tag) ? "active" : ""}
             >
               {tag}

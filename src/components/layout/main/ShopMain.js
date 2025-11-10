@@ -1,6 +1,5 @@
 "use client";
-import Features4 from "@/components/sections/features/Features4";
-import HeroPrimary from "@/components/sections/hero-banners/HeroPrimary";
+// import HeroPrimary from "@/components/sections/hero-banners/HeroPrimary";
 import ProductsPrimary from "@/components/sections/products/ProductsPrimary";
 import useSearch from "@/hooks/useSearch";
 import filterItems from "@/libs/filterItems";
@@ -95,28 +94,6 @@ const ShopMain = ({ title, isSidebar, text, currentTapId }) => {
 
   return (
     <main>
-      <HeroPrimary
-        title={
-          category
-            ? `Category: ${makeText(category)}`
-            : brand
-            ? `Brand: ${makeText(brand)}`
-            : size
-            ? `Product Size: ${makeText(size)}`
-            : tag
-            ? `Tag: ${makeText(tag)}`
-            : color
-            ? `Product  Color: ${makeText(color)}`
-            : search
-            ? `Search: ${makeText(search)}`
-            : title
-            ? title
-            : "Shop"
-        }
-        text={text ? text : "Shop"}
-        type={isSidebar === "primary" ? 2 : 3}
-        isCapitalize={brand ? true : false}
-      />
       <CommonContext
         value={{
           filteredProducts,
@@ -138,7 +115,6 @@ const ShopMain = ({ title, isSidebar, text, currentTapId }) => {
       >
         <ProductsPrimary isSidebar={isSidebar} currentTapId={currentTapId} />
       </CommonContext>
-      <Features4 />
     </main>
   );
 };

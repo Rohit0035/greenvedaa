@@ -7,13 +7,10 @@ import React from "react";
 const ProductCategories = () => {
   const { currentPath, category: currentCategory } = useCommonContext();
   const categories = [
-    "Vegetables",
-    "Fruits",
-    "Meat",
-    "Fish",
-    "Others",
-    "Fried",
-    "Uncategorized",
+    "Snacks",
+    "Wellness",
+    "Powders",
+    "Ritual Kits",
   ];
   return (
     <div className="widget ltn__menu-widget">

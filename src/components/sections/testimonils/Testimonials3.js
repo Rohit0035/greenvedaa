@@ -22,7 +22,7 @@ const Testimonials3 = ({ pt }) => {
         <div className="row">
           <div className="col-lg-12" data-aos="zoom-in">
             <div className="section-title-area ltn__section-title-2 text-center">
-              <h6 className="section-subtitle ltn__secondary-color">
+              <h6 className="section-subtitle text-success fs-4 fw-bold">
                 {"//"} Testimonials
               </h6>
               <h1 className="section-title">

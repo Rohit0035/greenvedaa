@@ -1,4 +1,55 @@
-/* heder css  */
+.container{
+  max-width: 1280px !important;
+}
+a{
+  text-decoration: none !important;
+  color: unset !important;
+}
 .ltn__header-middle-area{
     padding: 4px  0px !important;
 }
+.st_hero_grid{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #fbf4d787;
+}
+
+/* Swiper navigation buttons */
+          .swiper-button-prev,
+          .swiper-button-next {
+            background: #198754 !important;
+            color: #fff !important;
+            width: 30px !important;
+            height: 30px !important;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            padding: 8px !important;
+          }
+
+          .swiper-button-prev:hover,
+          .swiper-button-next:hover {
+            background: #0b4013;
+            transform: scale(1.1);
+          }
+
+          /* Adjust arrow icons */
+          .swiper-button-prev::after,
+          .swiper-button-next::after {
+            font-size: 14px !important;
+            font-weight: bold;
+          }
+
+          /* Pagination bullets */
+          .swiper-pagination-bullet {
+            background: #6c757d;
+            opacity: 0.7;
+          }
+
+          .swiper-pagination-bullet-active {
+            background: #dc3545;
+            opacity: 1;
+          }

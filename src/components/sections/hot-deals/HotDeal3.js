@@ -7,7 +7,7 @@ const HotDeal3 = () => {
     <div className="ltn__call-to-action-area ltn__call-to-action-4 section-bg-1 pt-110 pb-120">
       <div className="container">
         <div className="row">
-          <div className="col-lg-5">
+          <div className="col-lg-5" data-aos="zoom-in">
             <Image
               src="/img/common/hotdeal.png" 
               height={1000}
@@ -15,10 +15,10 @@ const HotDeal3 = () => {
               alt="GreenVedaa Makhanya"
             />
           </div>
-          <div className="col-lg-7">
+          <div className="col-lg-7" data-aos="zoom-in">
             <div className="call-to-action-inner call-to-action-inner-4 text-color-white--- text-center---">
               <div className="section-title-area ltn__section-title-2 text-center---">
-                <h6 className="ltn__secondary-color">Today’s Hot Deal</h6>
+                <h6 className="text-success fs-5">Today’s Hot Deal</h6>
                 <h1 className="section-title">
                   GreenVedaa Makhanya <br /> Flavored & Raw Collection
                 </h1>

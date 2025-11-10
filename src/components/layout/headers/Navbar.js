@@ -88,6 +88,9 @@ const Navbar = () => {
       >
         <nav>
           <div className="ltn__main-menu">
+             <div className="serch position-absolute" style={{top:'15px'}}>
+                 <input type="search"  placeholder="serach.." className="px-2 py-2"  style={{border:'1px solid#cccccc42'}}/>
+             </div>
             <ul>
               {navItems?.map((item, idx) => (
                 <NavItem key={idx} item={item} />

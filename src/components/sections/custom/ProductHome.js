@@ -1,6 +1,10 @@
+"use client";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
 import ProductCardPrimary from "@/components/shared/cards/ProductCardPrimary";
 import getAllProducts from "@/libs/getAllProducts";
-import React from "react";
 
 const ProductHome = ({ isRelated, title, tag, pt, pb }) => {
   const products = getAllProducts()
@@ -9,22 +13,22 @@ const ProductHome = ({ isRelated, title, tag, pt, pb }) => {
 
   return (
     <div
-      className={`ltn__product-slider-area ltn__product-gutter py-5 ${
-        pb ? pb : ""
-      }  ${pt ? pt : isRelated ? "" : ""}`}
+      data-aos="zoom-in"
+      className={`ltn__product-slider-area ltn__product-gutter py-5 ${pb ? pb : ""} ${
+        pt ? pt : isRelated ? "" : ""
+      }`}
     >
       <div className="container">
+        {/* Section Title */}
         <div className="row">
           <div className="col-lg-12">
             <div
-              className={`section-title-area   ${
-                isRelated ? "ltn__section-title-2" : " text-center"
+              className={`section-title-area ${
+                isRelated ? "ltn__section-title-2" : "text-center"
               }`}
             >
-              {tag ? (
+              {tag && (
                 <h6 className="section-subtitle ltn__secondary-color">{tag}</h6>
-              ) : (
-                ""
               )}
               <h1 className="section-title">
                 {title ? title : "Our Products"}
@@ -33,14 +37,28 @@ const ProductHome = ({ isRelated, title, tag, pt, pb }) => {
             </div>
           </div>
         </div>
-        <div className="row ltn__product-slider-item-four-active slick-arrow-1">
-          {/* <!-- ltn__product-item --> */}
+
+        {/* Swiper Slider */}
+        <Swiper
+          modules={[Navigation]}
+          navigation
+          spaceBetween={30}
+          slidesPerView={4}
+          loop={true}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            576: { slidesPerView: 2 },
+            992: { slidesPerView: 3 },
+            1200: { slidesPerView: 4 },
+          }}
+          className="product-swiper"
+        >
           {products?.map((product, idx) => (
-            <div key={idx} className="col-lg-12">
+            <SwiperSlide key={idx}>
               <ProductCardPrimary product={product} isShowDisc={true} />
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
     </div>
   );

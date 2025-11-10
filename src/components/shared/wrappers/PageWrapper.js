@@ -10,6 +10,7 @@ import Preloader from "../others/Preloader";
 import main from "@/libs/main";
 import WishlistContextProvider from "@/providers/WshlistContext";
 import ProductContext from "@/providers/ProductContext";
+import AOS from "aos";
 
 const PageWrapper = ({
   children,
@@ -31,6 +32,11 @@ const PageWrapper = ({
 }) => {
   useEffect(() => {
     main();
+     AOS.init({
+      duration: 1000,
+      offset: 100,
+      once: true, 
+    });
   }, []);
   return (
     <div className="body-wrapper">

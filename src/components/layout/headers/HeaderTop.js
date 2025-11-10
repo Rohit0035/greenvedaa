@@ -7,7 +7,7 @@ const HeaderTop = () => {
   const { headerStyle, headerSize, headerTopBg } = useHeaderContex();
   return (
     <div
-      className={`ltn__header-top-area py-2 d-none d-sm-block ${
+      className={`ltn__header-top-area py-2 d-none d-sm-block bg-success ${
         headerStyle === 2 || headerStyle === 4 || headerTopBg === "dark"
           ? "top-area-color-white "
           : ""
@@ -22,13 +22,13 @@ const HeaderTop = () => {
               <ul>
                 {" "}
                 <li>
-                  <Link href="/locations">
-                    <i className="icon-placeholder"></i> lorem ipsum
+                  <Link href="/locations" className="text-white">
+                    <i className="icon-placeholder text-white"></i> lorem ipsum
                   </Link>
                 </li>{" "}
                 <li>
-                  <Link href="mailto:info@webmail.com?Subject=Flower%20greetings%20to%20you">
-                    <i className="icon-mail"></i> info@gmail.com
+                  <Link href="mailto:info@webmail.com?Subject=Flower%20greetings%20to%20you" className="text-white">
+                    <i className="icon-mail text-white"></i> info@gmail.com
                   </Link>
                 </li>{" "}
               </ul>
@@ -77,26 +77,27 @@ const HeaderTop = () => {
                           <Link
                             href="https://www.facebook.com"
                             title="Facebook"
+                            className="text-white"
                           >
                             <i className="fab fa-facebook-f"></i>
                           </Link>
                         </li>{" "}
                         <li>
-                          <Link href="https://x.com" title="Twitter">
+                          <Link href="https://x.com" title="Twitter" className="text-white">
                             <i className="fa-brands fa-x-twitter"></i>
                           </Link>
                         </li>{" "}
                         <li>
                           <Link
-                            href="https://www.instagram.com"
+                            href="https://www.instagram.com" className="text-white"
                             title="Instagram"
                           >
-                            <i className="fab fa-instagram"></i>
+                            <i className="fab fa-instagram" ></i>
                           </Link>
                         </li>{" "}
                         <li>
                           <Link
-                            href="https://www.dribbble.com"
+                            href="https://www.dribbble.com" className="text-white"
                             title="Dribbble"
                           >
                             <i className="fab fa-dribbble"></i>

@@ -3,6 +3,13 @@ import "@/assets/css/font-icons.css";
 import "@/assets/css/plugins.css";
 import "./globals.css";
 import "@/assets/css/responsive.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "aos/dist/aos.css";
+import "../assets/css/custom.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+
 import Script from "next/script";
 import { Suspense } from "react";
 const open_sans = Open_Sans({
@@ -19,8 +26,8 @@ const rajdhani = Rajdhani({
 });
 
 export const metadata = {
-  title: "test",
-  description: "test",
+  title: "GreenVedaa",
+  description: "We believe in the harmony between wellness and the planet. ",
 };
 
 export default function RootLayout({ children }) {

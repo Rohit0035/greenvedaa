@@ -21,7 +21,7 @@ const HeaderRight = () => {
     >
       {headerStyle === 3 ? <HeaderCurrency /> : ""}
       {/* <!-- header-search-1 --> */}{" "}
-      <div className="header-search-wrap">
+      <div className="header-search-wrap d-block d-sm-none">
         <div className="header-search-1">
           <div className="search-icon">
             <i className="icon-search for-search-show"></i>
@@ -46,7 +46,7 @@ const HeaderRight = () => {
             <Link href="#">
               <i className="icon-user"></i>
             </Link>
-            {/* <ul>
+            <ul>
               <li>
                 <Link href="/login">Sign in</Link>
               </li>
@@ -59,7 +59,7 @@ const HeaderRight = () => {
               <li>
                 <Link href="/wishlist">Wishlist</Link>
               </li>
-            </ul> */}
+            </ul>
           </li>
         </ul>
       </div>

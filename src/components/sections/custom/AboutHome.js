@@ -9,61 +9,51 @@ const AboutHome = ({ pt }) => {
         <div className="row align-items-center">
           {/* Left Image */}
           <div className="col-lg-6">
-            <div className="about-us-img-wrap about-img-left">
+            <div className="about-us-img-wrap about-img-left" data-aos="zoom-in">
               <Image
-                src="/img/others/6.png"
+                src="/img/common/ab-1.png"
                 alt="GreenVedaa About"
                 width={570}
                 height={531}
-                className="rounded-4 shadow-sm"
+                className="rounded-4 "
               />
             </div>
           </div>
 
           {/* Right Content */}
           <div className="col-lg-6">
-            <div className="about-us-info-wrap">
-              <div className="section-title-area ltn__section-title-2 mb-4">
-                <h6 className="section-subtitle ltn__secondary-color text-success fw-semibold">
+            <div className="about-us-info-wrap" data-aos="zoom-in">
+              <div className="section-title-area ltn__section-title-2 mb-1">
+                <h6 className="section-subtitle  text-success fw-semibold mb-2 fs-5">
                   About GreenVedaa
                 </h6>
-                <h2 className="fw-bold fs-1">
-                  Conscious Living Through
-                  Nature’s Wisdom
+                <h2 className="fw-bold fs-1 mb-1">
+                  Conscious Living Through Nature’s Wisdom
                 </h2>
-                <p className="text-muted">
-                  At <strong>GreenVedaa</strong>, we believe in the harmony
-                  between wellness and the planet. Every product we craft is
-                  inspired by ancient Ayurvedic principles, powered by
-                  sustainable innovation, and sourced from trusted organic farms
-                  across India.
-                </p>
               </div>
-
+              <p className="text-muted w-100">
+                <strong>GreenVedaa</strong> is a holistic lifestyle brand that aims to
+                redefine purity and sustainability. We are committed to delivering
+                high-quality, chemical-free health and lifestyle products that enrich
+                everyday living. Our mission is to offer <strong>100% pure, organic,</strong>
+                and <strong>environmentally friendly</strong> solutions that touch every aspect of
+                human life — from food and beverages to clothing, accessories, and home care.
+              </p>
               <p className="text-muted">
-                Our journey began with a single purpose — to offer authentic,
-                traceable, and ethical products that nurture both your body and
-                the Earth. From farm to shelf, transparency guides every step.
-                We ensure zero waste packaging, fair trade practices, and
-                mindful choices that honor nature.
+                <strong>Our Vision:</strong> To become the most trusted global brand for organic lifestyle
+                solutions — expanding from Bihar to the world. GreenVedaa strives to build
+                a sustainable supply chain, establish <strong>GreenVedaa Experience Centers</strong>,
+                export to <strong>50+ countries</strong>, and pioneer the concept of “Pure Home, Pure Life.”
               </p>
 
-              <div className="about-author-info d-flex align-items-center mt-4">
-                <div className="author-name-designation me-3">
-                  <h5 className="mb-0 fw-bold">Lorem Ipsum</h5>
-                  <small className="text-muted">/ Founder, GreenVedaa</small>
-                </div>
-                {/* <div className="author-sign">
-                  <Image
-                    src="/img/icons/icon-img/author-sign.png"
-                    alt="Signature"
-                    width={100}
-                    height={40}
-                  />
-                </div> */}
-              </div>
+              <p className="text-muted mb-0">
+                <strong>Our Mission:</strong> To deliver holistic purity and sustainable living through
+                everyday products while creating a conscious global community that values
+                nature, health, and authenticity.
+              </p>
             </div>
           </div>
+
         </div>
       </div>
 

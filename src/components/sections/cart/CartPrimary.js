@@ -84,7 +84,7 @@ const CartPrimary = () => {
                           <button
                             onClick={handleUpdateCart}
                             type="submit"
-                            className={`btn theme-btn-2  ${
+                            className={`btn theme-btn-2 text-white ${
                               isUpdate ? "" : "disabled"
                             }`}
                             disabled={isUpdate ? false : true}

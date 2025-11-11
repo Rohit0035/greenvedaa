@@ -1,14 +1,12 @@
-import Features4 from "@/components/sections/features/Features4";
-import HeroPrimary from "@/components/sections/hero-banners/HeroPrimary";
+import CommonBreadcrumb from "@/components/sections/custom/CommonBreadcrumb";
 import WishlistPrimary from "@/components/sections/wishlist/WishlistPrimary";
 import React from "react";
 
 const WishlistMain = () => {
   return (
-    <main className="d-none">
-      <HeroPrimary title="Wishlist" text="Wishlist" />
+    <main>
+      <CommonBreadcrumb title="WishList" label="Home"/>
       <WishlistPrimary />
-      <Features4 />
     </main>
   );
 };

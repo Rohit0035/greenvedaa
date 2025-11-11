@@ -63,11 +63,11 @@ const ContactPrimary = () => {
     }
   }, [formData.agree, status]);
   return (
-    <div className="ltn__contact-message-area mb-120 mb--100">
+    <div className="ltn__contact-message-area pt-5 pb-5 bg-light" data-aos="zoom-in">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="ltn__form-box contact-form-box box-shadow white-bg">
+            <div className="ltn__form-box contact-form-box box-shadow bg-success-subtle bg-opacity-75">
               <h4 className="title-2">Get A Quote</h4>
               <form id="contact-form" onSubmit={(e) => handleSubmit(e)}>
                 <div className="row">
@@ -95,18 +95,7 @@ const ContactPrimary = () => {
                       />
                     </div>
                   </div>
-                  <div className="col-md-6">
-                    <div className="input-item">
-                      <select name="serviceType" className="nice-select">
-                        <option>Select Service Type</option>
-                        <option>Car Repair </option>
-                        <option>Engine Repairing </option>
-                        <option>Oil Change</option>
-                        <option>Car Wash</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
+                  <div className="col-md-12">
                     <div className="input-item input-item-phone ltn__custom-icon">
                       <input
                         type="text"

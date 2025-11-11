@@ -1,14 +1,13 @@
 import CartPrimary from "@/components/sections/cart/CartPrimary";
-import Features4 from "@/components/sections/features/Features4";
+import CommonBreadcrumb from "@/components/sections/custom/CommonBreadcrumb";
 import HeroPrimary from "@/components/sections/hero-banners/HeroPrimary";
 import React from "react";
 
 const CartMain = () => {
   return (
-    <main className="d-none">
-      <HeroPrimary title="Cart" text="Cart" />
+    <main>
+      <CommonBreadcrumb title="Cart" label="Home"/>
       <CartPrimary />
-      <Features4 />
     </main>
   );
 };

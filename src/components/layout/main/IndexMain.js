@@ -1,3 +1,4 @@
+import CounterUp2 from "@/components/sections/counters/CounterUp2";
 import AboutHome from "@/components/sections/custom/AboutHome";
 import GreenVedaaManifesto from "@/components/sections/custom/GreenVedaaManifesto";
 import HeroGridVideo from "@/components/sections/custom/HeroGridVideo";
@@ -13,8 +14,8 @@ const IndexMain = () => {
       <HeroGridVideo/>
       <GreenVedaaManifesto/>
       <AboutHome/>
-      {/* <Offer4 /> */}
       <ProductHome/>
+      <CounterUp2/>
       <HotDeal3 />
       <Video />
       <Testimonials3 />

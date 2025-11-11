@@ -15,6 +15,12 @@ const Navbar = () => {
       name: "Home",
       path: "/",
       dropdown: null,
+
+    },
+    {
+      name: "About",
+      path: "/about",
+      dropdown: null,
       dropdownSection: [],
     },
     {
@@ -26,10 +32,10 @@ const Navbar = () => {
           title: null,
           path: "#",
           dropdownItems: [
-            { name: "Snacks", path: "/snacks" },
-            { name: "Wellness", path: "/wellness" },
-            { name: "Powders", path: "/powders" },
-            { name: "Ritual Kits", path: "/ritualkits" },
+            { name: "Snacks", path: "/shop" },
+            { name: "Wellness", path: "/shop" },
+            { name: "Powders", path: "/shop" },
+            { name: "Ritual Kits", path: "/shop" },
           ],
         },
       ],
@@ -39,23 +45,16 @@ const Navbar = () => {
       name: "Conscious Journal",
       path: "/conscious",
       dropdown: null,
-      dropdownSection: [],
     },
-    {
-      name: "About",
-      path: "#",
-      dropdown: null,
-      dropdownSection: [],
-    },
+
     {
       name: "Tribe",
       path: "#",
       dropdown: null,
-      dropdownSection: [],
     },
     {
       name: "Contact",
-      path: "#",
+      path: "/contact",
       dropdown: null,
     },
   ];
@@ -65,9 +64,9 @@ const Navbar = () => {
     dropdown:
       idx === 0 ? (
         <HomeDropdown items={navItem?.dropdownSection} /> // ✅ fixed prop name
-      ) : idx > 0 && idx < 4 ? (
+      ) : idx > 0 && idx < 3 ? (
         <CommonDropdown items={navItem?.dropdownSection} />
-      ) : idx === 4 ? (
+      ) : idx === 0 ? (
         <PagesDropdown items={navItem?.dropdownSection} /> // ✅ fixed here too
       ) : null,
   }));
@@ -91,7 +90,7 @@ const Navbar = () => {
             <div className="input-group">
               <input type="search" placeholder="serach.." className="px-2 py-2" style={{ border: '1px solid#cccccc42', width: '280px' }} />
               <button className="btn btn-light">
-                <i className="fas fa-search text-dark opecity-10"/>
+                <i className="fas fa-search text-dark opecity-10" />
               </button>
             </div>
 

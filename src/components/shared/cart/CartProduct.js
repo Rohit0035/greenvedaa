@@ -10,7 +10,9 @@ import { useProductContext } from "@/providers/ProductContext";
 import { useWishlistContext } from "@/providers/WshlistContext";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
+import { Button, Input } from "reactstrap";
+import { FaMinus, FaPlus } from "react-icons/fa";
 
 const CartProduct = ({
   product,
@@ -19,54 +21,35 @@ const CartProduct = ({
   setIsUpdate,
   isWishlist,
 }) => {
-  const { id, title, price, quantity: quantity1, image, disc, color } = product;
-  // dom referance
-  const inputRef = useRef(null);
-  // hooks
+  const { id, title, price, quantity: quantity1, image, disc } = product;
+
+  // Contexts
   const { deleteProductFromCart, addProductToCart } = useCartContext();
   const { deleteProductFromWishlist } = useWishlistContext();
-  const [quantity, setQuantity] = useState(quantity1);
   const { setCurrentProduct } = useProductContext();
-  // variables
+
+  // State
+  const [quantity, setQuantity] = useState(quantity1);
+
+  // Price Calculations
   const { netPrice } = countDiscount(price, disc);
   const totalPrice = countTotalPrice([{ ...product, quantity }]);
   const netPriceModified = modifyAmount(netPrice);
   const totalPiceModified = modifyAmount(totalPrice);
-  const isQuantiy = quantity > 1;
 
-  //   get quantity
+  // Update products when quantity changes
   useEffect(() => {
     if (!isWishlist) {
-      const inputParent = inputRef.current;
-      const input = inputParent.querySelector("input");
-      setTimeout(() => {
-        const increament = inputParent.querySelector(".inc");
-        const decreament = inputParent.querySelector(".dec");
-
-        increament.addEventListener("click", () => {
-          setQuantity(parseInt(input.value));
-          setIsUpdate(true);
-        });
-        decreament.addEventListener("click", () => {
-          setQuantity(parseInt(input.value));
-          setIsUpdate(true);
-        });
-      }, 500);
-    }
-  }, [isWishlist]);
-  // handle updated products
-  useEffect(() => {
-    if (!isWishlist) {
-      const newUptedProducts = [...updateProducts]?.map((product) =>
-        id === product?.id ? { ...product, quantity } : product
+      const newUpdatedProducts = [...updateProducts]?.map((p) =>
+        id === p?.id ? { ...p, quantity } : p
       );
-      setUpdateProducts(newUptedProducts);
+      setUpdateProducts(newUpdatedProducts);
     }
+  }, [quantity, isWishlist]);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isWishlist, quantity]);
   return (
     <tr onMouseEnter={() => setCurrentProduct(product)}>
+      {/* Remove product */}
       <td
         className="cart-product-remove"
         onClick={() =>
@@ -74,41 +57,87 @@ const CartProduct = ({
             ? deleteProductFromWishlist(id, title)
             : deleteProductFromCart(id, title)
         }
+        style={{ cursor: "pointer" }}
       >
         x
       </td>
+
+      {/* Product image */}
       <td className="cart-product-image">
         <Link href={`/products/${id}`}>
-          <Image src={image} alt="#" height={1000} width={1000} />
+          <Image src={image} alt={title} height={1000} width={1000} />
         </Link>
       </td>
+
+      {/* Product title */}
       <td className="cart-product-info">
         <h4>
           <Link href={`/products/${id}`}>{sliceText(title, 30)}</Link>
         </h4>
       </td>
+
+      {/* Product price */}
       <td className="cart-product-price">₹{netPriceModified}</td>
+
+      {/* Quantity Controls */}
       {isWishlist ? (
         <td className="cart-product-stock">In Stock</td>
       ) : (
         <td className="cart-product-quantity">
-          <div className="cart-plus-minus" ref={inputRef}>
-            <input
-              value={quantity}
+          <div
+            className="d-flex align-items-center justify-content-center gap-2"
+            style={{
+              border: "1px solid #ddd",
+              borderRadius: "6px",
+              padding: "4px 8px",
+              width: "120px",
+            }}
+          >
+            <Button
+              color="light"
+              size="sm"
+              className="p-1 me-0"
+              onClick={() => {
+                if (quantity > 1) {
+                  setQuantity(quantity - 1);
+                  setIsUpdate(true);
+                }
+              }}
+            >
+              <FaMinus size={12} />
+            </Button>
+
+            <Input
               type="text"
-              name="qtybutton"
-              className="cart-plus-minus-box"
+              value={quantity}
+              className="text-center mb-0 p-0"
+              bsSize="sm"
               onChange={(e) => {
-                setQuantity(
-                  !parseInt(e.target.value) ? 1 : parseInt(e.target.value)
-                );
+                const val = parseInt(e.target.value);
+                setQuantity(isNaN(val) || val < 1 ? 1 : val);
                 setIsUpdate(true);
               }}
+              style={{
+                height:'40px'
+              }}
             />
+
+            <Button
+              color="light"
+              size="sm"
+              className="p-1"
+              onClick={() => {
+                setQuantity(quantity + 1);
+                setIsUpdate(true);
+              }}
+            >
+              <FaPlus size={12} />
+            </Button>
           </div>
         </td>
       )}
 
+      {/* Add to Cart or Subtotal */}
       {isWishlist ? (
         <td
           className="cart-product-add-cart"
@@ -120,7 +149,7 @@ const CartProduct = ({
           }
         >
           <Link
-            className="submit-button-1"
+            className="btn btn-dark text-white"
             href="#"
             title="Add to Cart"
             data-bs-toggle="modal"

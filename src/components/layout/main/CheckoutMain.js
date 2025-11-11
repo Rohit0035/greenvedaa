@@ -1,13 +1,11 @@
 import CheckoutPrimary from "@/components/sections/checkout/CheckoutPrimary";
-import Features4 from "@/components/sections/features/Features4";
-import HeroPrimary from "@/components/sections/hero-banners/HeroPrimary";
+import CommonBreadcrumb from "@/components/sections/custom/CommonBreadcrumb";
 
 const CheckoutMain = () => {
   return (
-    <main className="d-none">
-      <HeroPrimary title="Checkout" text="Checkout" />
+    <main>
+      <CommonBreadcrumb title="Checkout" label="Home"/>
       <CheckoutPrimary />
-      <Features4 />
     </main>
   );
 };

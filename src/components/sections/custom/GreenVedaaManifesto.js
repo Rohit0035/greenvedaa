@@ -9,21 +9,25 @@ export default function GreenVedaaManifesto() {
       icon: "fas fa-seedling",
       title: "Organic & Traceable",
       desc: "We ensure every ingredient is organically grown and completely traceable back to its natural source.",
+      bg: "bg-success-subtle bg-opacity-75 border border-success-subtle",
     },
     {
       icon: "fas fa-recycle",
       title: "Zero Waste",
       desc: "Our production process minimizes waste and promotes sustainable packaging for a cleaner planet.",
+      bg: "bg-warning-subtle bg-opacity-75 border border-warning-subtle",
     },
     {
       icon: "fas fa-hand-holding-heart",
       title: "Ethical Sourcing",
       desc: "We work directly with ethical farms and producers, ensuring fair trade and respect for nature.",
+      bg: "bg-info-subtle bg-opacity-75 border border-info-subtle",
     },
     {
       icon: "fas fa-leaf",
       title: "Holistic Living",
       desc: "We promote harmony between mind, body, and environment through pure and natural products.",
+      bg: "bg-primary-subtle bg-opacity-75 border border-primary-subtle",
     },
   ];
 
@@ -32,31 +36,36 @@ export default function GreenVedaaManifesto() {
   };
 
   return (
-    <section className="py-5 bg-light position-relative overflow-hidden" data-aos="zoom-in">
+    <section
+      className="py-5 bg-light position-relative overflow-hidden"
+      data-aos="zoom-in"
+    >
       <div className="container text-center">
-        <div className="section-title-area ltn__section-title-2 text-center mb-5">
-          <h1 className="section-title fw-bold">The GreenVedaa Manifesto</h1>
+        <div className="section-title-area text-center mb-5">
+          <h1 className="section-title fw-bold text-success">
+            The GreenVedaa Manifesto
+          </h1>
         </div>
 
         <div className="row justify-content-center gy-4">
           {items.map((item, index) => (
             <div className="col-6 col-md-3" key={index}>
-              <div className="p-4 bg-white rounded-4 shadow-sm position-relative hover-float h-100">
+              <div
+                className={`p-4 rounded-4 shadow-sm position-relative hover-float h-100 ${item.bg}`}
+              >
                 <div className="icon mb-3">
                   <i className={`${item.icon} text-success fs-1`}></i>
                 </div>
 
                 <h6
-                  className="fw-bold mb-2 cursor-pointer text-dark fs-5"
+                  className="fw-bold mb-2 text-dark fs-5"
                   style={{ cursor: "pointer" }}
                   onClick={() => toggleDescription(index)}
                 >
                   {item.title}
                 </h6>
 
-                <div
-                  className={`collapse ${openIndex === index ? "show" : ""}`}
-                >
+                <div className={`collapse ${openIndex === index ? "show" : ""}`}>
                   <p className="small text-muted mb-0">{item.desc}</p>
                 </div>
               </div>

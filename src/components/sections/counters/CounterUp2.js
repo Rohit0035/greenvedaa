@@ -1,62 +1,105 @@
-import Image from "next/image";
-import React from "react";
+"use client";
+import React, { useEffect, useRef, useState } from "react";
+import { FaUsers, FaGift, FaGlobe, FaSeedling } from "react-icons/fa";
+
+// ✅ Child component with its own counter hook
+const CounterItem = ({ title, num, sym, icon }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef();
+  const [started, setStarted] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !started) {
+          setStarted(true);
+          const startTime = performance.now();
+
+          const animate = (time) => {
+            const progress = Math.min((time - startTime) / 2000, 1);
+            setCount(Math.floor(progress * num));
+            if (progress < 1) requestAnimationFrame(animate);
+          };
+
+          requestAnimationFrame(animate);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [num, started]);
+
+  return (
+    <div
+      ref={ref}
+      className="col-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center"
+    >
+      <div className="bg-dark text-white rounded-4 p-4 text-center shadow-sm hover-animate">
+        <div className="counter-icon mb-3 text-success">{icon}</div>
+        <h1 className="fw-bold fs-1 mb-1">
+          {count}
+          <span className="text-success ms-1">{sym}</span>
+        </h1>
+        <p className="mb-0 text-light fw-semibold">{title}</p>
+      </div>
+    </div>
+  );
+};
 
 const CounterUp2 = () => {
   const items = [
     {
       title: "Active Clients",
       num: 733,
-      letter: null,
-      image: "/img/icons/icon-img/2.png",
-      sym: "+",
-    },
-    {
-      title: "Cup Of Coffee",
-      num: 33,
-      letter: "K",
-      image: "/img/icons/icon-img/3.png",
+      icon: <FaUsers />,
       sym: "+",
     },
     {
       title: "Get Rewards",
       num: 100,
-      letter: null,
-      image: "/img/icons/icon-img/4.png",
+      icon: <FaGift />,
       sym: "+",
     },
     {
-      title: "Country Cover",
+      title: "Cities Covered",
       num: 21,
-      letter: null,
-      image: "/img/icons/icon-img/5.png",
+      icon: <FaGlobe />,
       sym: "+",
     },
+    {
+      title: "Farmer Partnerships",
+      num: 52,
+      icon: <FaSeedling />,
+      sym: " ",
+    },
   ];
+
   return (
-    <div
-      className="ltn__counterup-area bg-image bg-overlay-theme-black-80 pt-115 pb-70"
-      data-bs-bg="/img/bg/5.jpg"
-    >
+    <section className="py-5 bg-light">
       <div className="container">
-        <div className="row">
-          {items?.map(({ title, num, letter, sym, image }, idx) => (
-            <div key={idx} className="col-md-3 col-sm-6 align-self-center">
-              <div className="ltn__counterup-item-3 text-color-white text-center">
-                <div className="counter-icon">
-                  {" "}
-                  <Image src={image} alt="#" width={66} height={69} />{" "}
-                </div>
-                <h1>
-                  <span className="counter">{num}</span>
-                  <span className="counterUp-icon">{sym}</span>{" "}
-                </h1>
-                <h6>{title}</h6>
-              </div>
-            </div>
+        <div className="row text-center justify-content-center">
+          {items.map((item, idx) => (
+            <CounterItem key={idx} {...item} />
           ))}
         </div>
       </div>
-    </div>
+
+      <style jsx>{`
+        .hover-animate {
+          transition: all 0.4s ease;
+        }
+        .hover-animate:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 8px 18px rgba(0, 128, 0, 0.25);
+        }
+        .counter-icon {
+          font-size: 3rem;
+        }
+      `}</style>
+    </section>
   );
 };
 

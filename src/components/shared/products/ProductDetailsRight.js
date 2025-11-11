@@ -140,7 +140,7 @@ const ProductDetailsRight = ({ product }) => {
                 className="cart-plus-minus-box"
               />
             </div>
-          </li>{" "}
+          </li>
           <li>
             <Link
               onClick={(e) => {

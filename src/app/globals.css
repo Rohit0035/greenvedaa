@@ -1717,7 +1717,7 @@ ul {
 }
 
 .bg-overlay-black-90:before {
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.9) !important;
 }
 
 .bg-overlay-white-10:before {
@@ -1753,7 +1753,7 @@ ul {
 }
 
 .bg-overlay-white-90:before {
-  background: rgba(255, 255, 255, 0.9);
+  background:rgb(17 64 8 / 90%);
 }
 
 .bg-overlay-theme-10,
@@ -1785,7 +1785,7 @@ ul {
   height: 100%;
   width: 100%;
   z-index: -1;
-  background-color: var(--ltn__secondary-color);
+  background-color: var(--green) !important;
 }
 
 .bg-overlay-theme-10:before {

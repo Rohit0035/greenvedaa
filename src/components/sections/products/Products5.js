@@ -1,48 +1,43 @@
 "use client";
+
 import React from "react";
 import ProductCardPrimary from "@/components/shared/cards/ProductCardPrimary";
 import getAllProducts from "@/libs/getAllProducts";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 
 const Products5 = ({ isRelated, title, tag, pt, pb }) => {
-  const products = getAllProducts()
-    ?.sort((a, b) => b.disc - a.disc)
-    .slice(0, 6);
+  const products = getAllProducts()?.sort((a, b) => b.disc - a.disc).slice(0, 6);
 
   return (
-    <div
-      className={`ltn__product-slider-area ltn__product-gutter ${
+    <section
+      className={`product-slider-section py-5 bg-light ${pt ? pt : ""} ${
         pb ? pb : ""
-      } ${pt ? pt : isRelated ? "pb-70" : "pt-115 pb-70"}`}
+      }`}
     >
       <div className="container">
-        <div className="row">
-          <div className="col-lg-12">
-            <div
-              className={`section-title-area ${
-                isRelated ? "ltn__section-title-2" : "text-center"
-              }`}
-            >
-              {tag && (
-                <h6 className="section-subtitle ltn__secondary-color">{tag}</h6>
-              )}
-              <h1 className="section-title">
-                {title ? title : "Special Offers"}
-                {isRelated && <span>.</span>}
-              </h1>
-            </div>
+        {/* Header */}
+        <div className="row mb-4">
+          <div className="col-lg-12 text-center">
+            {tag && (
+              <h6 className="text-success fw-bold text-uppercase mb-2">
+                {tag}
+              </h6>
+            )}
+            <h2 className="fw-bold">
+              {title ? title : "Special Offers"}
+              <span className="text-success">.</span>
+            </h2>
           </div>
         </div>
 
+        {/* ✅ Swiper Only (no slick classes) */}
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
+          modules={[Navigation, Autoplay]}
           spaceBetween={30}
           slidesPerView={4}
           navigation
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 3000 }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
           loop={true}
           breakpoints={{
             0: { slidesPerView: 1 },
@@ -50,7 +45,7 @@ const Products5 = ({ isRelated, title, tag, pt, pb }) => {
             992: { slidesPerView: 3 },
             1200: { slidesPerView: 4 },
           }}
-          className="ltn__product-slider-item-four-active"
+          className="product-swiper"
         >
           {products?.map((product, idx) => (
             <SwiperSlide key={idx}>
@@ -59,7 +54,7 @@ const Products5 = ({ isRelated, title, tag, pt, pb }) => {
           ))}
         </Swiper>
       </div>
-    </div>
+    </section>
   );
 };
 

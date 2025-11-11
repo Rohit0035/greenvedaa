@@ -1,12 +1,13 @@
 import Image from "next/image";
 import React from "react";
+import userpic from "../../../../public/img/common/user-pic.png"
 
 const TestimonialCard2 = ({ testimonial }) => {
   const { name, image, desc, desig } = testimonial;
   return (
-    <div className="ltn__testimonial-item ltn__testimonial-item-4">
+    <div className="ltn__testimonial-item ltn__testimonial-item-4 h-100">
       <div className="ltn__testimoni-img">
-        <Image src={image} alt="#" priority={false} height={400} width={400} />
+        <Image src={userpic} alt="#" priority={false} height={400} width={400} />
       </div>
       <div className="ltn__testimoni-info">
         <p>{desc} </p>

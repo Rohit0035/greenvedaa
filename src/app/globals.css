@@ -14778,8 +14778,8 @@ input.cart-plus-minus-box {
   font-size: 14px;
 }
 .ltn__tab-menu-list .nav a.active {
-  background-color: var(--section-bg-2);
-  color: var(--white);
+  background-color:#ad9d6b !important;
+  color: var(--white) !important;
 }
 
 .ltn__myaccount-tab-content-inner > p {

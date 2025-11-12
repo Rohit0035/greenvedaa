@@ -1,14 +1,13 @@
 import AccountPrimary from "@/components/sections/account/AccountPrimary";
-import Features4 from "@/components/sections/features/Features4";
+import CommonBreadcrumb from "@/components/sections/custom/CommonBreadcrumb";
 import HeroPrimary from "@/components/sections/hero-banners/HeroPrimary";
 import React from "react";
 
 const AccountMain = () => {
   return (
     <main>
-      <HeroPrimary title={"My Account"} text="My Account" />
+      <CommonBreadcrumb title="My Account" label="Home"/>
       <AccountPrimary />
-      <Features4 />
     </main>
   );
 };

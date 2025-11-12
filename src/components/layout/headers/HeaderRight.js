@@ -47,29 +47,14 @@ const HeaderRight = () => {
             </Link>
             <ul>
               <li>
-                <Link href="/">Sign in</Link>
-              </li>
-              <li>
-                <Link href="/">Register</Link>
-              </li>
-              <li>
-                <Link href="/">My Account</Link>
-              </li>
-              <li>
-                <Link href="/">Wishlist</Link>
-              </li>
-              {/* <li>
                 <Link href="/login">Sign in</Link>
               </li>
               <li>
                 <Link href="/register">Register</Link>
               </li>
-              <li>
+               <li>
                 <Link href="/account">My Account</Link>
               </li>
-              <li>
-                <Link href="/wishlist">Wishlist</Link>
-              </li> */}
             </ul>
           </li>
         </ul>

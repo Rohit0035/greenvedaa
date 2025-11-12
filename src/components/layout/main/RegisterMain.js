@@ -1,14 +1,12 @@
-import Features4 from "@/components/sections/features/Features4";
-import HeroPrimary from "@/components/sections/hero-banners/HeroPrimary";
+import CommonBreadcrumb from "@/components/sections/custom/CommonBreadcrumb";
 import RegisterPrimary from "@/components/sections/register/RegisterPrimary";
 import React from "react";
 
 const RegisterMain = () => {
   return (
     <main>
-      <HeroPrimary title={"Sign Up"} text="Register" />
+       <CommonBreadcrumb title="Sign Up" label="Home"/>
       <RegisterPrimary />
-      <Features4 />
     </main>
   );
 };

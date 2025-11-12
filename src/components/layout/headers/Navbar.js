@@ -17,12 +17,7 @@ const Navbar = () => {
       dropdown: null,
 
     },
-    {
-      name: "About",
-      path: "/about",
-      dropdown: null,
-      dropdownSection: [],
-    },
+    
     {
       name: "Shop",
       path: "#",
@@ -40,7 +35,12 @@ const Navbar = () => {
         },
       ],
     },
-
+    {
+      name: "About",
+      path: "/about",
+      dropdown: null,
+      dropdownSection: [],
+    },
     {
       name: "Conscious Journal",
       path: "/conscious",

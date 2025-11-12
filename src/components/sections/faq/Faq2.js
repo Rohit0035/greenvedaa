@@ -15,7 +15,7 @@ const Faq2 = () => {
         </div>
 
         <div className="row">
-          <div className="col-lg-8 offset-2">
+          <div className="col-lg-8">
             <div className="ltn__faq-inner ltn__faq-inner-2">
               <div id="accordion_2">
 

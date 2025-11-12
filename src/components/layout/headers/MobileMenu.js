@@ -17,6 +17,7 @@ const MobileMenu = () => {
       path: "/",
       accordion: null,
     },
+     
     {
       name: "Shop",
       path: "#",
@@ -24,33 +25,34 @@ const MobileMenu = () => {
       accordionItems: [
         {
           name: "Snacks",
-          path: "/",
+          path: "/shop",
         },
         {
           name: "Wellness",
-          path: "/",
+          path: "/shop",
         },
         {
           name: "Powders",
-          path: "/",
+          path: "/shop/",
         },
         {
           name: "Ritual Kits",
-          path: "/",
+          path: "/shop",
         },
 
       ],
+    },
+    {
+      name: "About",
+      path: "/about",
+      accordion: null,
     },
     {
       name: "Conscious Journal",
       path: "/",
       accordion: null,
     },
-    {
-      name: "About",
-      path: "/",
-      accordion: null,
-    },
+   
     {
       name: "Tribe",
       path: "/",
@@ -58,7 +60,7 @@ const MobileMenu = () => {
     },
     {
       name: "Contact",
-      path: "/",
+      path: "/contact",
       accordion: null,
     },
   ];

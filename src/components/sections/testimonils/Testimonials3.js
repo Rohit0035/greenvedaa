@@ -41,7 +41,7 @@ const Testimonials3 = ({ pt }) => {
           slidesPerView={3}
           breakpoints={{
             0: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
+            768: { slidesPerView: 1 },
             1200: { slidesPerView: 2 },
           }}
           className="testimonial-swiper"

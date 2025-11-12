@@ -37,11 +37,11 @@ const CounterItem = ({ title, num, sym, icon }) => {
       ref={ref}
       className="col-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center"
     >
-      <div className="bg-dark text-white rounded-4 p-4 text-center shadow-sm hover-animate">
+      <div className="text-white rounded-4 p-4 text-center shadow-sm hover-animate">
         <div className="counter-icon mb-3 text-success">{icon}</div>
         <h1 className="fw-bold fs-1 mb-1">
           {count}
-          <span className="text-success ms-1">{sym}</span>
+          <span className="text-white ms-1">{sym}</span>
         </h1>
         <p className="mb-0 text-light fw-semibold">{title}</p>
       </div>
@@ -54,31 +54,31 @@ const CounterUp2 = () => {
     {
       title: "Active Clients",
       num: 733,
-      icon: <FaUsers />,
+      icon: <FaUsers size={45}  className="text-white"/>,
       sym: "+",
     },
     {
       title: "Get Rewards",
       num: 100,
-      icon: <FaGift />,
+      icon: <FaGift  size={45}  className="text-white" />,
       sym: "+",
     },
     {
       title: "Cities Covered",
       num: 21,
-      icon: <FaGlobe />,
+      icon: <FaGlobe  size={45}  className="text-white" />,
       sym: "+",
     },
     {
       title: "Farmer Partnerships",
       num: 52,
-      icon: <FaSeedling />,
+      icon: <FaSeedling  size={45}  className="text-white" />,
       sym: " ",
     },
   ];
 
   return (
-    <section className="py-5 bg-light">
+    <section className="ltn__counterup-area bg-image bg-overlay-theme-black-80 py-5" data-bs-bg="/img/bg/5.jpg">
       <div className="container">
         <div className="row text-center justify-content-center">
           {items.map((item, idx) => (

@@ -27,7 +27,7 @@ const About5 = ({ pt }) => {
   return (
     <div className={`ltn__about-us-area pb-5 ${pt ? pt : "pt-120"} pb-120`}>
       <div className="container">
-        <div className="row g-5">
+        <div className="row">
           {/* Left Image */}
           <div className="col-lg-6 align-self-center" data-aos="zoom-in">
             <div className="about-us-img-wrap">

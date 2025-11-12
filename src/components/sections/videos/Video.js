@@ -3,7 +3,7 @@ import React from "react";
 
 const Video = () => {
   return (
-    <div className="ltn__video-popup-area ltn__video-popup-margin">
+    <div className="ltn__video-popup-area ltn__video-popup-margin py-5 mb-0">
       <div className="container">
         <div className="row">
           <div className="col-lg-12">

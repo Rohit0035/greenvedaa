@@ -1,6 +1,15 @@
 "use client";
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import {
+  Offcanvas,
+  OffcanvasHeader,
+  OffcanvasBody,
+  Button,
+  Collapse,
+} from "reactstrap";
+
 import ProductCardPrimary from "@/components/shared/cards/ProductCardPrimary";
-import ProductCardPrimary2 from "@/components/shared/cards/ProductCardPrimary2";
 import Nodata from "@/components/shared/no-data/Nodata";
 import Pagination from "@/components/shared/paginations/Pagination";
 import ShopDataShowing from "@/components/shared/products/ShopDataShowing";
@@ -9,12 +18,14 @@ import ProductSidebar from "@/components/shared/sidebars/ProductSidebar";
 import usePagination from "@/hooks/usePagination";
 import filterItems from "@/libs/filterItems";
 import { useCommonContext } from "@/providers/CommonContext";
-import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import { FaArrowUp } from "react-icons/fa";
 
 const ProductsPrimary = ({ isSidebar, currentTapId }) => {
   const [arrangeInput, setArrangeInput] = useState("default");
   const [currentTab, setCurrentTab] = useState(currentTapId ? currentTapId : 0);
+  const [filterOpen, setFilterOpen] = useState(false);
+
+  const toggleFilter = () => setFilterOpen(!filterOpen);
 
   const { filteredProducts } = useCommonContext();
   const limit =
@@ -31,7 +42,7 @@ const ProductsPrimary = ({ isSidebar, currentTapId }) => {
     arrangeInput,
     arrangeInput
   );
-  // get pagination details
+
   const {
     currentItems,
     totalItems,
@@ -46,7 +57,6 @@ const ProductsPrimary = ({ isSidebar, currentTapId }) => {
     lastItem,
   } = usePagination(arrangedProducts, limit, 5);
 
-  const tabControllers = ["fas fa-th-large", "fas fa-list"];
   useEffect(() => {
     setCurrentpage(0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -56,15 +66,15 @@ const ProductsPrimary = ({ isSidebar, currentTapId }) => {
     <div className="ltn__product-area ltn__product-gutter mb-120">
       <div className="container">
         <div className="row">
-         
           {isSidebar === false ? (
             ""
           ) : (
-            <div className="col-lg-3">
+            <div className="col-lg-3 d-none d-lg-block">
               <ProductSidebar />
             </div>
           )}
-           <div
+
+          <div
             className={`${isSidebar === false ? "col-lg-12" : "col-lg-9"}  ${
               isSidebar === "left" ? "order-lg-2 " : ""
             }`}
@@ -101,6 +111,7 @@ const ProductsPrimary = ({ isSidebar, currentTapId }) => {
                 </li>
               </ul>
             </div>
+
             <div className="tab-content">
               <div
                 className={`tab-pane fade ${
@@ -110,7 +121,6 @@ const ProductsPrimary = ({ isSidebar, currentTapId }) => {
               >
                 <div className="ltn__product-tab-content-inner ltn__product-grid-view">
                   <div className="row">
-                    {/* <!-- ltn__product-item --> */}
                     {currentItems?.map((product, idx) => (
                       <div
                         className={`${
@@ -121,12 +131,11 @@ const ProductsPrimary = ({ isSidebar, currentTapId }) => {
                         <ProductCardPrimary product={product} />
                       </div>
                     ))}
-
-                    {/* <!--  --> */}
                   </div>
                 </div>
               </div>
             </div>
+
             {totalPages > 1 ? (
               <Pagination
                 totalPages={totalPages}
@@ -142,6 +151,30 @@ const ProductsPrimary = ({ isSidebar, currentTapId }) => {
           </div>
         </div>
       </div>
+
+      {/* === Mobile Bottom Buttons === */}
+      <div className="d-lg-none px-2 d-flex justify-content-around align-items-center fixed-bottom bg-white border-top shadow-sm py-2">
+        <Button
+          className="theme-btn-1 btn btn-effect-1 w-50"
+          onClick={toggleFilter}
+        >
+          <i className="fas fa-filter me-2"></i> Filter
+        </Button>
+        <Button
+          href="/"
+          className="theme-btn-1 btn btn-effect-1 w-50"
+        >
+          <FaArrowUp className="me-2 "/> Back to Home
+        </Button>
+      </div>
+
+      {/* === Filter Sidebar (Offcanvas) === */}
+      <Offcanvas isOpen={filterOpen} toggle={toggleFilter} direction="start">
+        <OffcanvasHeader toggle={toggleFilter}>Filter Products</OffcanvasHeader>
+        <OffcanvasBody>
+          <ProductSidebar />
+        </OffcanvasBody>
+      </Offcanvas>
     </div>
   );
 };

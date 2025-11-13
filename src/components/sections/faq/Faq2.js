@@ -15,6 +15,7 @@ const Faq2 = () => {
         </div>
 
         <div className="row">
+          <div className="col-lg-2"></div>
           <div className="col-lg-8">
             <div className="ltn__faq-inner ltn__faq-inner-2">
               <div id="accordion_2">
@@ -162,6 +163,7 @@ const Faq2 = () => {
               </div>
             </div>
           </div>
+          <div className="col-lg-2"></div>
         </div>
       </div>
 

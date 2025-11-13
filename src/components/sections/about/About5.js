@@ -30,7 +30,7 @@ const About5 = ({ pt }) => {
         <div className="row">
           {/* Left Image */}
           <div className="col-lg-6 align-self-center" data-aos="zoom-in">
-            <div className="about-us-img-wrap">
+            <div className="about-us-img-wrap mb-3">
               <Image
                 src={abtimg}
                 alt="About GreenVedaa"

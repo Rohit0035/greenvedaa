@@ -52,8 +52,7 @@ const CheckoutPrimary = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="ltn__checkout-inner">
-              {/* login */}
-              <div className="ltn__checkout-single-content ltn__returning-customer-wrap">
+              {/* <div className="ltn__checkout-single-content ltn__returning-customer-wrap">
                 <h5>
                   Returning customer?{" "}
                   <Link
@@ -103,9 +102,8 @@ const CheckoutPrimary = () => {
                     </form>
                   </div>
                 </div>
-              </div>
-              {/* coupon */}
-              <div className="ltn__checkout-single-content ltn__coupon-code-wrap">
+              </div> */}
+              {/* <div className="ltn__checkout-single-content ltn__coupon-code-wrap">
                 <h5>
                   Have a coupon?{" "}
                   <Link
@@ -134,9 +132,9 @@ const CheckoutPrimary = () => {
                     </form>
                   </div>
                 </div>
-              </div>
+              </div> */}
               {/* buyer info */}
-              <div className="ltn__checkout-single-content mt-50">
+              <div className="ltn__checkout-single-content mt-0">
                 <h4 className="title-2">Billing Details</h4>
                 <div className="ltn__checkout-single-content-info">
                   <form action="#">

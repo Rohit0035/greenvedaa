@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import CertificateImg from "../../../../public/img/common/greenvedaa-certificate.png"
 
 const PortfolioCard = ({ portfolio }) => {
   const { id, title, desc, icon, img, dep, duration, path } = portfolio;
   return (
-    <div className="ltn__gallery-item-inner">
+    <div className="ltn__gallery-item-inner bg-white h-100" data-aos="zoom-in">
       <div className="ltn__gallery-item-img">
         <Link href={path} data-rel="lightcase:myCollection">
-          <Image src={img} alt="Image" width={600} height={454} />
+          <Image src={CertificateImg} alt="Image" width={600} height={454} />
           <span className="ltn__gallery-action-icon">{icon}</span>
         </Link>
       </div>

@@ -3,14 +3,15 @@ import sliceText from "@/libs/sliceText";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import blogimg from "../../../../public/img/common/blog-img.png"
 
 const BlogCardPrimary = ({ blog }) => {
   const { title, image, id, publishDate, author, category } = blog;
   return (
-    <div className="ltn__blog-item ltn__blog-item-3">
+    <div className="ltn__blog-item ltn__blog-item-3" data-aos="zoom-in">
       <div className="ltn__blog-img">
         <Link href={`/blogs/${id}`}>
-          <Image src={image} alt="#" width={2000} height={1000} />
+          <Image src={blogimg} alt="#" width={2000} height={1000} />
         </Link>
       </div>
       <div className="ltn__blog-brief">
@@ -29,8 +30,8 @@ const BlogCardPrimary = ({ blog }) => {
             </li>
           </ul>
         </div>
-        <h3 className="ltn__blog-title">
-          <Link href={`/blogs/${id}`}>{sliceText(title, 40)}</Link>
+        <h3 className="ltn__blog-title text-over">
+          <Link href={`/blogs/${id}`} className="text-over">{sliceText(title, 40)}</Link>
         </h3>
         <div className="ltn__blog-meta-btn">
           <div className="ltn__blog-meta">

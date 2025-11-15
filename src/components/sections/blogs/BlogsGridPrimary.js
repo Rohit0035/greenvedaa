@@ -22,7 +22,7 @@ const BlogsGridPrimary = () => {
   } = usePagination(blogs, 6, 5);
 
   return (
-    <div className="ltn__blog-area ltn__blog-item-3-normal mb-100">
+    <div className="ltn__blog-area ltn__blog-item-3-normal pb-5"> 
       <div className="container">
         <div className="row">
           {/* <!-- Blog Item --> */}

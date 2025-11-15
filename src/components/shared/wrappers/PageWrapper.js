@@ -11,6 +11,7 @@ import main from "@/libs/main";
 import WishlistContextProvider from "@/providers/WshlistContext";
 import ProductContext from "@/providers/ProductContext";
 import AOS from "aos";
+import HeaderDemo from "@/components/layout/headers/HeaderDemo";
 
 const PageWrapper = ({
   children,
@@ -63,6 +64,7 @@ const PageWrapper = ({
               }}
             >
               <Header />
+              {/* <HeaderDemo/> */}
             </HeaderContex>
 
             <ProductContext>{children}</ProductContext>

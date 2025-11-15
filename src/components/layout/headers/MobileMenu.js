@@ -49,7 +49,7 @@ const MobileMenu = () => {
     },
     {
       name: "Conscious Journal",
-      path: "/",
+      path: "/blogs",
       accordion: null,
     },
    

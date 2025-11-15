@@ -42,7 +42,7 @@ export default function GreenVedaaManifesto() {
     >
       <div className="container text-center">
         <div className="section-title-area text-center mb-5">
-          <h1 className="section-title fw-bold text-success">
+          <h1 className="section-title fw-bold">
             The GreenVedaa Manifesto
           </h1>
         </div>

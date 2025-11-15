@@ -11,22 +11,17 @@ import SidebarBanner from "./widgets/SidebarBanner";
 
 const BlogSidebar = () => {
   return (
-    <aside className="sidebar-area blog-sidebar ltn__right-sidebar">
-      {/* <!-- Author Widget --> */}
-      <BlogAuthor />
+    <aside className="sidebar-area blog-sidebar ltn__right-sidebar" data-aos="zoom-in">
+
       {/* <!-- Search Widget --> */}
       <SidebarSearch />
-      {/* <!-- Popular Post Widget --> */}
-      <PopularBlog />
+
       {/* <!-- Menu Widget (Category) --> */}
       <BlogCategories />
-      {/* <!-- Social Media Widget --> */}
-      <SidebarSocials />
-      {/* <!-- Popular Post Widget (Twitter Post) --> */}
-      <TwitterFeeds />
-      {/* <!-- Instagram Widget --> */}
-      <InstagramFeeds />
-      {/* <!-- Tagcloud Widget --> */}
+
+      {/* <!-- Popular Post Widget --> */}
+      <PopularBlog />
+      
       <BlogTags />
       {/* <!-- Banner Widget --> */}
       <SidebarBanner image={"/img/banner/banner-4.jpg"} />

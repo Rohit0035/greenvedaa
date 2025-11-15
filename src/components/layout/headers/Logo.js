@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-const logoImage1 = "/img/common/veda-logo.png";
+const logoImage1 = "/img/common/logo-circle.png";
 // const logoImage2 = "/img/logo-2.png";
 
 import Link from "next/link";

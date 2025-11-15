@@ -11,7 +11,7 @@ import useSearch from "@/hooks/useSearch";
 import modifyNumber from "@/libs/modifyNumber";
 import countCommentLength from "@/libs/countCommentLength";
 import sliceText from "@/libs/sliceText";
-
+import blogimg from "../../../../public/img/common/blog-img.png"
 const BlogDetailsPrimary = () => {
   const { id: currentId } = useParams();
   const blogs = getAllBlogs();
@@ -54,7 +54,7 @@ const BlogDetailsPrimary = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-8">
-            <div className="ltn__blog-details-wrap">
+            <div className="ltn__blog-details-wrap" data-aos="zoom-in">
               <div className="ltn__page-details-inner ltn__blog-details-inner">
                 <div className="ltn__blog-meta">
                   <ul>
@@ -71,7 +71,7 @@ const BlogDetailsPrimary = () => {
                     <li className="ltn__blog-author">
                       <Link href={`/blogs?author=${makePath(author?.name)}`}>
                         <Image
-                          src={author?.image}
+                          src={blogimg}
                           alt="#"
                           width={2000}
                           height={1000}
@@ -120,7 +120,7 @@ const BlogDetailsPrimary = () => {
                   dolore eu fugiat nulla pariatur. Excepteur sint occaecat
                   cupidatat non proident, sunt in culpa qui officia deserunt.
                 </p>
-                <Image src={image} alt="Image" width={800} height={478} />
+                <Image src={blogimg} alt="Image" width={800} height={478} />
                 <h2>A cleansing hot shower or bath</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
@@ -144,7 +144,7 @@ const BlogDetailsPrimary = () => {
                 </p>
                 <hr />
                 <h2>Setting the mood with incense</h2>
-                <div className="list-item-with-icon-2">
+                <div className="list-item-with-icon-2 mb-3">
                   <ul>
                     <li>
                       Lorem ipsum dolor sit amet, consectetur adipisicing elit,
@@ -187,7 +187,7 @@ const BlogDetailsPrimary = () => {
 
                 <Image
                   className="alignleft"
-                  src="/img/blog/blog-details/1.jpg"
+                  src={blogimg}
                   alt="Image"
                   width={255}
                   height={278}
@@ -227,7 +227,7 @@ const BlogDetailsPrimary = () => {
                 <div className="row">
                   <div className="col-lg-6">
                     <Image
-                      src="/img/service/31.jpg"
+                      src={blogimg}
                       alt="Image"
                       width={600}
                       height={600}
@@ -236,7 +236,7 @@ const BlogDetailsPrimary = () => {
                   </div>
                   <div className="col-lg-6">
                     <Image
-                      src="/img/service/32.jpg"
+                      src={blogimg}
                       alt="Image"
                       width={600}
                       height={600}

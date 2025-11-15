@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-const logoImage = "/img/common/veda-logo.png";
-const logoImage2 = "/img/common/veda-logo.png";
+const logoImage = "/img/common/logo-circle.png";
+const logoImage2 = "/img/common/logo-circle.png";
 import Link from "next/link";
 import { useFooterContex } from "@/providers/FooterContext";
 
@@ -21,7 +21,6 @@ const FooterAbout2 = () => {
         <p>
           GreenVedaa is a holistic lifestyle brand that aims to redefine purity and sustainability.
         </p>
-       
       </div>
     </div>
   );

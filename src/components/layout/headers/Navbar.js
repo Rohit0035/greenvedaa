@@ -43,7 +43,7 @@ const Navbar = () => {
     },
     {
       name: "Conscious Journal",
-      path: "/conscious",
+      path: "/blogs",
       dropdown: null,
     },
 

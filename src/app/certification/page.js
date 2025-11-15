@@ -1,8 +1,8 @@
-import BlogGridMain from "@/components/layout/main/BlogGridMain";
+import PortfolioMain from "@/components/layout/main/PortfolioMain";
 import PageWrapper from "@/components/shared/wrappers/PageWrapper";
 import React from "react";
 
-const BlogsList = () => {
+const Portfolio2 = () => {
   return (
     <PageWrapper
       isNotHeaderTop={true}
@@ -10,9 +10,9 @@ const BlogsList = () => {
       isTextWhite={true}
       isNavbarAppointmentBtn={true}
     >
-      <BlogGridMain />
+      <PortfolioMain type={2} />
     </PageWrapper>
   );
 };
 
-export default BlogsList;
+export default Portfolio2;

@@ -1,13 +1,11 @@
 import BlogsGridPrimary from "@/components/sections/blogs/BlogsGridPrimary";
-import Features4 from "@/components/sections/features/Features4";
-import HeroPrimary from "@/components/sections/hero-banners/HeroPrimary";
+import CommonBreadcrumb from "@/components/sections/custom/CommonBreadcrumb";
 
 const BlogGridMain = () => {
   return (
     <main>
-      <HeroPrimary title={"Blog Grid"} text={"Blogs"} />
+       <CommonBreadcrumb title="Blogs"  label="Home"  />
       <BlogsGridPrimary />
-      <Features4 />
     </main>
   );
 };

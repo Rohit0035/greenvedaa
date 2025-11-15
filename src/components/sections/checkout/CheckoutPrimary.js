@@ -52,7 +52,7 @@ const CheckoutPrimary = () => {
         <div className="row">
           <div className="col-lg-12">
             <div className="ltn__checkout-inner">
-              {/* <div className="ltn__checkout-single-content ltn__returning-customer-wrap">
+              <div className="ltn__checkout-single-content ltn__returning-customer-wrap">
                 <h5>
                   Returning customer?{" "}
                   <Link
@@ -82,11 +82,11 @@ const CheckoutPrimary = () => {
                         </div>
                         <div className="col-md-6">
                           <div className="input-item input-item-email ltn__custom-icon">
-                            <input
-                              type="email"
-                              name="ltn__email"
-                              placeholder="Enter email address"
-                            />
+                             <input
+                            type="text"
+                            name="ltn__phone"
+                            placeholder="phone number"
+                          />
                           </div>
                         </div>
                       </div>
@@ -102,7 +102,7 @@ const CheckoutPrimary = () => {
                     </form>
                   </div>
                 </div>
-              </div> */}
+              </div>
               {/* <div className="ltn__checkout-single-content ltn__coupon-code-wrap">
                 <h5>
                   Have a coupon?{" "}

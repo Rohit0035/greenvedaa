@@ -21,18 +21,20 @@ const PortfolioPrimary = ({ type }) => {
     }
   }, [isAll]);
   return (
-    <div className="ltn__gallery-area mb-120">
+    <div className="ltn__gallery-area py-5 " style={{ backgroundColor: '#f8eacfb5' }}>
       <div className="container">
+        <h2 className="section-title text-center mb-4">
+          Our Certification
+        </h2>
         {/* <!-- Portfolio Wrapper Start --> */}
 
         <div
-          className={`row   ${
-            type === 2 ? "ltn__gallery-style-1" : "ltn__gallery-style-2"
-          }`}
+          className={`row   ${type === 2 ? "ltn__gallery-style-1" : "ltn__gallery-style-2"
+            }`}
         >
           {portfolios?.map((portfolio, idx) => (
             <div
-              className="ltn__gallery-item filter_category_3 col-lg-4 col-sm-6 col-12"
+              className="ltn__gallery-item filter_category_3 col-lg-3 col-sm-6 col-12"
               key={idx}
             >
               <PortfolioCard portfolio={portfolio} />
@@ -63,7 +65,7 @@ const PortfolioPrimary = ({ type }) => {
         ) : (
           <div className="btn-wrapper text-center">
             <button
-              className="btn btn-transparent btn-effect-3 btn-border"
+              className="theme-btn-1 btn btn-effect-1"
               onClick={() => setIsAll(true)}
             >
               LOAD MORE +

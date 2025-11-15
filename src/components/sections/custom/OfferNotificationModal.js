@@ -29,7 +29,7 @@ const OfferNotificationModal = () => {
       className="p-0 border-0 modal-md"
     > 
       <ModalBody className="p-0 m-0 border-0 ">
-        <Link href="/" onClick={toggle}>
+        <Link href="/shop" onClick={toggle}>
           <Image
             src={adsimg}
             alt="Offer Advertisement"

@@ -10,11 +10,10 @@ const BlogCategories = () => {
   const { currentPath, category: currentCategory } = useCommonContext();
   const blogs = getAllBlogs();
   const categories = [
-    "Business",
-    "Consultant",
-    "Creative",
-    "UI/UX",
-    "Technology",
+    "Snacks",
+    "Wellness",
+    "Powders",
+    "Ritual Kits",
   ];
   return (
     <div className="widget ltn__menu-widget ltn__menu-widget-2 ltn__menu-widget-2-color-2">
@@ -26,6 +25,7 @@ const BlogCategories = () => {
             className={currentCategory === makePath(category) ? "active" : ""}
           >
             <Link
+              className="text-white"
               href={`${
                 currentPath ? currentPath : "/blogs"
               }?category=${makePath(category)}`}
